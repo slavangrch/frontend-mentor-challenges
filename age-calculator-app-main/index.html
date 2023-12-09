@@ -12,24 +12,23 @@
     <div class="date">
       <div class="box">
         <label for="day">DAY</label>
-        <input name="day" type="number" placeholder="DD">
+        <input name="day" type="number" placeholder="DD" onkeypress="if (this.value.length >= 2) return false;">
         <p class="error-message">Must be a valid date</p>
       </div>
       <div class="box">
         <label for="month">MONTH</label>
-        <input name="month" type="number" placeholder="MM">
+        <input name="month" type="number" maxlength="2" placeholder="MM" onkeypress="if (this.value.length >= 2) return false;">
         <p class="error-message">Must be a valid date</p>
       </div>
       <div class="box">
         <label for="year">YEAR</label>
-        <input name="year" type="number" placeholder="YYYY">
+        <input name="year" type="number" maxlength="4" placeholder="YYYY" onkeypress="if (this.value.length >= 4) return false;">
         <p class="error-message">Must be a valid date</p>
       </div>
     </div>
 
     <div class="line">
       <div class="circle"><img class="icon" src="assets/images/icon-arrow.svg" alt="Arrow"></div>
-        <!-- <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg> -->
       </img>
     </div>
 

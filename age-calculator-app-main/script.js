@@ -1,10 +1,8 @@
-
 const date =  document.querySelectorAll('.date input');
 const button = document.querySelector('.circle');
 const spans = document.querySelectorAll('.calculator span');
 const dateContainer = document.querySelector('.date');
 const p = dateContainer.querySelectorAll('p');
-// console.log(p[0]);
 
 const amountOfDaysInMonth = {
     0: 31,
@@ -32,10 +30,7 @@ function calculateAge() {
     const years = age.getUTCFullYear() - 1970;
     const months = age.getUTCMonth(); 
     const days = age.getUTCDate() - 1; 
-
-    spans[0].textContent = years;
-    spans[1].textContent = months;
-    spans[2].textContent = days;
+    incNbr(years, months, days)
 }
 
 
@@ -55,7 +50,7 @@ function checkInputs(){
         p[1].classList.add('hint');
     }
 
-    if (birthDate>new Date() || year>new Date().getFullYear) {
+    if (birthDate>new Date() || year>new Date().getFullYear()) {
         dateContainer.classList.add('error');
         p.forEach((item) => {
             item.textContent = 'This date is in the future';
@@ -81,6 +76,27 @@ function checkInputs(){
     return birthDate;
 }
 
-button.addEventListener('click', calculateAge)
+var speed = 25;
 
-// console.log(+date[2].value);
+function incEltNbr(n, endNbr) {
+    elt = spans[n];
+    incNbrRec(0, endNbr, elt);
+}
+
+/*A recursive function to increase the number.*/
+function incNbrRec(i, endNbr, elt) {
+  if (i <= endNbr) {
+    elt.innerHTML = i;
+    setTimeout(function() { //Delay a bit before calling the function again.
+      incNbrRec(i + 1, endNbr, elt);
+    }, speed);
+  }
+}
+
+function incNbr(years, months, days){
+    incEltNbr(0, years);
+    incEltNbr(1, months);
+    incEltNbr(2, days);
+}
+
+button.addEventListener('click', calculateAge);

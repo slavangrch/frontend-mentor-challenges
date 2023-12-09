@@ -33,11 +33,10 @@ body {
     flex-direction: column;
     background-color: var(--white);
     padding: 30px 40px;
-    max-width: 640px;
+    width: 50%;
     min-width: 600px;
     border-radius: 20px;
     border-bottom-right-radius: 100px;
-    /* width: 80%; */
 }
 
 .date {
@@ -115,31 +114,13 @@ body {
     transition: background-color 0.3s;
 }
 
-/* .calculator__user-input-btn {
-    position: absolute;
-    right: 0;
-    bottom: -33px;
-    width: 66px;
-    height: 66px;
-    background-color: hsl(259, 100%, 65%);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.15s;
-    transition: background-color 0.4s;
-    scale: 1;
-  } */
-
-
 .icon {
     position: absolute;
     top: 11px;
     right: 10px;
     text-align: center;
-    /* text-align: center; */
     width: 55%;
     height: 55%;
-    /* transform: translateY(-50%); */
 }
 
 .calculator {
@@ -152,4 +133,15 @@ body {
     color: var(--purple);
     letter-spacing: 5px;
     margin-right: 5px;
+}
+
+@media screen and (max-width: 570px){
+    .container {
+        min-width: 400px;
+        padding: 30px 20px;
+    }
+
+    .line {
+        margin-top: 40px;
+    }
 }
