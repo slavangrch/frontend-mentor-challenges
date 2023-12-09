@@ -46,7 +46,7 @@ body {
     
 }
 
-.error-empty-field {
+.error-message {
     margin-top: 5px;
     font-size: 30%;
     color: var(--light-red);
@@ -59,7 +59,7 @@ body {
     border: 1px solid var(--light-red);
 }
 
-.date.error .error-empty-field {
+.date.error .error-message.hint {
     display: block;
 }
 
