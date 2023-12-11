@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+:root {
+    --soft-cyan: hsl(174, 77%, 80%);
+    --strong-cyan: hsl(174, 86%, 45%);
+    --light-grayish-red: hsl(14, 92%, 95%);
+    --light-red: hsl(15, 100%, 70%);    
+    --pale-blue: hsl(226, 100%, 87%);
+
+    --white: hsl(0, 0%, 100%);
+    --very-pale-blue: hsl(230, 100%, 99%);
+    --light-grayish-blue-lighter: hsl(224, 65%, 95%);
+    --light-grayish-blue: hsl(223, 50%, 87%);
+    --grayish-blue: hsl(225, 20%, 60%);
+    --dark-desaturated-blue: hsl(227, 35%, 25%);
+    --fs: 15px;
+    --ff: 'Manrope', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    position: relative;
+    background-color: var(--light-grayish-blue-lighter);
+    width: 100%;
+    height: 40vh;
+    border-bottom-left-radius: 120px;
+    z-index: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    margin-top: 80px;
+}
+
+.circles {
+    position: absolute;
+    top: 110px;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+body {
+    position: relative;
+    background-color: var(--very-pale-blue);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    font-family: var(--ff);
+    color: var(--dark-desaturated-blue);
+    font-size: var(--fs);
+}
+
+p {
+    color: var(--grayish-blue);
+    margin: 10px;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 30px 30px;
+    max-width: 540px;
+    min-width: 450px;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align:middle;
+
+}
+
+.container-header .reviews {
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+#price {
+    color: var(--dark-desaturated-blue);
+    font-size: 200%;
+    font-weight: 800;
+}
+
+.container-main {
+    margin: 30px auto;
+    border-bottom: 1px solid var(--light-grayish-blue-lighter);
+}
+
+.slidecontainer {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background-color: var(--light-grayish-blue-lighter);
+    height: 8px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    background: url(images/icon-slider.svg) no-repeat center var(--strong-cyan);
+}
+
+
+.billing {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.tag {
+    background-color: var(--light-grayish-blue-lighter);
+    width: 45px;
+    height: 23px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.tag .circle {
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+}
+
+.tag .circle.on {
+    left: 25px;
+}
+
+.tag:hover,
+.tag.active {
+    transition: background-color 0.3s;
+    background-color: var(--strong-cyan);
+}   
+
+.discount {
+    display: inline-block;
+    background-color: var( --light-grayish-red);
+    color: var(--light-red);
+    text-wrap: nowrap;
+    border-radius: 20px;
+    font-size: 11px;
+    padding: 4px 5px;
+}
+
+.container-footer {
+    color: var(--grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list li {
+    background: url(images/icon-check.svg) no-repeat 7px 7px;
+    list-style-type: none;
+    vertical-align: middle;
+    padding: 0px 0px 5px 30px;
+}
+
+.btn {
+    padding: 10px;
+    width: 180px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--dark-desaturated-blue);
+    color: var(--pale-blue);
+    font-family: inherit;
+    cursor: pointer;
+}
