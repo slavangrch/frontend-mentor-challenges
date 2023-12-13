@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Interactive pricing component</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="background">
@@ -18,13 +18,16 @@
 
   <div class="container">
     <div class="container-header">
-      <p class="reviews">100K Pageviews</p>
-      <p><span id="price">$16.00</span>/month</p>
+      <p class="reviews">10K Pageviews</p>
+      <div class="price-wrapper">
+        <span id="price">$8.00</span>
+        <p class="per">/month</p>
+      </div>
     </div>
 
     <div class="container-main">
       <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="10" class="slider" id="myRange">
+        <input type="range" min="0" max="100" value="0" step="25" class="slider" id="myRange">
       </div>
       <div class="billing">
         <p>Monthly Billing</p>
