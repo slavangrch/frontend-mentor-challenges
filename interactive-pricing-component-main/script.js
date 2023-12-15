@@ -2,29 +2,27 @@ const myRange = document.getElementById('myRange');
 const reviews = document.querySelector('.reviews');
 const price = document.getElementById('price');
 const tag = document.querySelector('.tag');
-
+const circle = tag.querySelector('.circle');
 
 function toggleTagHandler() {
-    let isActive = false;
     const regex = /\$(.*?)\./;
-    const circle = tag.querySelector('.circle');
     const per = document.querySelector('.per');
-    console.log(per.textContent);
     tag.classList.toggle('active');
     circle.classList.toggle('on');
-    if (tag.classList.contains('active') && circle.classList.contains('on')) {
-        isActive = true;
-    }
-    if (isActive) {
-        // console.log(price.textContent.match(regex)[1]);
+    const result = isActive();
+    if (result) {
         price.textContent = `$${+price.textContent.match(regex)[1]*12}.00`;
         per.textContent = '/year';
-    } else if (!isActive) {
+    } else if (!result){
         price.textContent = `$${+price.textContent.match(regex)[1]/12}.00`;
         per.textContent = '/month';
     }
-    return isActive;
 }
+
+function isActive() {
+    return tag.classList.contains('active') && circle.classList.contains('on');
+}
+
 
 tag.addEventListener('click', toggleTagHandler)
 
@@ -51,6 +49,12 @@ myRange.addEventListener('input', (event) => {
         curRev = 1;
         curPrice = 36;
     }
+
     reviews.textContent = !(tempSliderValue == 100) ? `${curRev}K Pageviews` : `${curRev}M Pageviews`;
-    price.textContent = `$${curPrice}.00`;
+    if (isActive()) {
+        price.textContent = `$${curPrice*12}.00`;
+    } else {
+        price.textContent = `$${curPrice}.00`
+    }
+       
 })

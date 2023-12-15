@@ -203,4 +203,9 @@ p {
     color: var(--pale-blue);
     font-family: inherit;
     cursor: pointer;
+    transition: color 0.2s linear;
+}
+
+.btn:hover {
+    color: var(--white);
 }
