@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 98%);
+    --gray: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+    --ff: 'Epilogue', sans-serif;
+    --fs: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff);
+    /* font-size: var(--fs); */
+}
+
+header {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    color: var(--gray);
+    justify-content: space-between;
+    margin-bottom: 65px;
+}
+
+.logo img {
+    margin-top: 5px;
+    margin-right: 40px;
+    vertical-align: middle;
+}
+
+.wrap {
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    font-size: 15px;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 30px;
+    text-wrap: nowrap;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+.nav-item:nth-of-type(1)::after,
+.nav-item:nth-of-type(2)::after {
+    content: url(images/icon-arrow-down.svg);
+    margin-left: 5px;
+}
+
+.btn-wrapper {
+    text-wrap: nowrap;
+}
+
+.btn {
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    padding: 10px 30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-border {
+    border: 1px solid var(--black);
+    border-radius: 10px;
+}
+
+main {
+    display: flex;
+    max-width: 1100px;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 20px auto;
+}
+
+.information-container {
+    align-self: center;
+    width: 45%;
+
+}
+
+.information-container h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+.text {
+    color: var(--gray);
+    line-height: 170%;
+    margin-bottom: 50px;
+}
+
+.btn-fill {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.companies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    width: 45%;
+}
+
+.hero .desktop-hero {
+    width: 100%;
+}
+
+.hero .mobile-hero {
+    width: 100%;
+    display: none;
+}
+
