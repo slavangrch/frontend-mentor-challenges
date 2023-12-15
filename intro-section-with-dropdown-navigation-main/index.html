@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Intro section with dropdown navigation</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -13,16 +13,36 @@
         <div class="logo"><img src="images/logo.svg" alt="logo snap"></div>
         <img class="menu-icon" src="images/icon-menu.svg" alt="">
         <ul class="nav">
-          <li class="nav-item">Features</li>
+          <li class="nav-item">
+            <div class="features">
+              <ul>
+                <div class="feature-wrapper">
+                  <img src="images/icon-todo.svg" alt="">
+                  <li class="feature-item">Todo List</li>
+                </div>
+                <div class="feature-wrapper">
+                  <img src="images/icon-calendar.svg" alt="">
+                  <li class="feature-item">Calendar</li>
+                </div>
+                <div class="feature-wrapper">
+                  <img src="images/icon-reminders.svg" alt="">
+                  <li class="feature-item">Reminders</li>
+                </div>
+                <div class="feature-wrapper">
+                  <img src="images/icon-planning.svg" alt="">
+                  <li class="feature-item">Planning</li>
+                </div>
+              </ul>
+            </div>Features</li>
           <li class="nav-item">Company</li>
           <li class="nav-item">Careers</li>
           <li class="nav-item">About</li>
         </ul>
       </div>
-    <div class="btn-wrapper">
-      <button class="btn">Login</button>
-      <button class="btn btn-border">Register</button>
-    </div>
+      <div class="btn-wrapper">
+        <button class="btn">Login</button>
+        <button class="btn btn-border">Register</button>
+      </div>
   </header>
   
   <main>
