@@ -14,7 +14,6 @@ nav[1].addEventListener('click', () => {
 })
 
 
-
 function showMenuHandler() {
     modal.classList.add('active');
     wrapper.classList.add('active');
